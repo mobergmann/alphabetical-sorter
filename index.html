@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Define Functions -->
     <script src="./sort.js"></script>
     
     <header>
@@ -17,31 +18,33 @@
 
     <form>
         <div class="texts">
+
             <div class="text_input">
+            
+                <!-- Input Text to sort -->
                 <label>Input</label>
                 <textarea
                     id="txt_in"
                     rows="15" cols="100"
                     oninput="sort(document.getElementById('txt_in').value, 'txt_out');"
                     class="form-row textarea"></textarea>
+            
             </div>
 
             <div class="text_input">
+
+                <!-- Sorted Output -->
                 <label>Sorted</label>
                 <textarea readonly
                     id="txt_out"
                     rows="15" cols="100"></textarea>
-            </div>   
+            
+            </div>
+
         </div>
 
         <div class="sort_buttons">
-            <!-- <input
-                type="button"
-                value="Sort"
-                onclick="sort(document.getElementById('txt_in').value, 'txt_out');"> -->
-
-            <input
-                type="reset">
+            <input type="reset">
         </div>
     </form>
 

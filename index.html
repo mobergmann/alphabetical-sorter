@@ -22,7 +22,7 @@
                 <textarea
                     id="txt_in"
                     rows="15" cols="100"
-                    oninput="sort(document.getElementById('txt_in').value);"
+                    oninput="sort(document.getElementById('txt_in').value, 'txt_out');"
                     class="form-row textarea"></textarea>
             </div>
 
@@ -38,7 +38,7 @@
             <input
                 type="button"
                 value="Sort"
-                onclick="sort(document.getElementById('txt_in').value);">
+                onclick="sort(document.getElementById('txt_in').value, 'txt_out');">
 
             <input
                 type="reset">

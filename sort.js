@@ -22,15 +22,19 @@ function is_lat_char(c) {
  */
 function is_smaller(left, right)
 {
+    // iterate every character of the two strings (break when out of bounds of one string)
     for (let i = 0; i < left.length && i < right.length; i++)
     {
+        // if not equals
         if (left[i] != right[i])
         {
+            // get char from string
             const char_left = left[i];
             const char_right = right[i];
 
             if (is_lat_char(char_left) && is_lat_char(char_right))
             {
+                // get ascii code from char
                 let left_ascii = char_left.charCodeAt(0);
                 let right_ascii = char_right.charCodeAt(0);
 
@@ -54,18 +58,26 @@ function is_smaller(left, right)
                     right_ascii = (right_ascii % 65) * 2;
                 }
                 
+                // compare latain letters on ascii code
                 return left_ascii < right_ascii;
             }
             else
             {
+                // not an ascii code => make a default comparison
                 return left < right;
             }
         }
     }
 
+    // if two words are equal to the length of them return is_smaller based on the length
     return left.length <= right.length;
 }
 
+/**
+ * Merge Sort from https://stackabuse.com/merge-sort-in-javascript/
+ * @param {array} left 
+ * @param {array} right 
+ */
 function merge(left, right)
 {
     let arr = [];
@@ -89,7 +101,10 @@ function merge(left, right)
     return [...arr, ...left, ...right];
 }
 
-
+/**
+ * Merge Sort from https://stackabuse.com/merge-sort-in-javascript/
+ * @param {array} array 
+ */
 function merge_sort(array)
 {
     const half = array.length / 2;
@@ -104,14 +119,28 @@ function merge_sort(array)
     return merge(merge_sort(left), merge_sort(array));
 }
 
+/**
+ * the regex, which checks if a string contains only whitespace.
+ */
+const whitespace_regex = new RegExp("^[\\n\\r\\s]+$");
 
-let whitespace_regex = new RegExp("^[\\n\\r\\s]+$");
+/**
+ * returns if a strings contains only whitespace or is empty.
+ * 
+ * @param {string} str 
+ */
 function is_whitespace(str)
 {
-    return str.match(whitespace_regex);
+    return str.match(whitespace_regex) || !(lines[i].length > 0);
 }
 
-function sort(text)
+/**
+ * Sorts a text by line breaks alphabetically and prints it into a given value of an id.
+ * 
+ * @param {string} text 
+ * @param {string} out_id 
+ */
+function sort(text, out_id)
 {
     // split the arrays into subarrays
     let lines = text.split("\n");
@@ -120,7 +149,7 @@ function sort(text)
     for (let i = 0; i < lines.length; i++)
     {
         const str = lines[i];
-        if (is_whitespace(str) || !(lines[i].length > 0))
+        if (is_whitespace(str))
         {
             lines.splice(i, 1);
             --i;
@@ -137,8 +166,5 @@ function sort(text)
     });
 
     // display sorted lines
-    document.getElementById("txt_out").value = txt;
+    document.getElementById(out_id).value = txt;
 }
-
-
-

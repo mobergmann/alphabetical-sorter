@@ -167,3 +167,14 @@ function sort(text)
 
     return txt;
 }
+
+
+
+function reset_form(form_id)
+{
+    var answer = window.confirm("Do you want to Reset the Input?");
+    if (answer)
+    {
+        document.getElementById(form_id).reset();
+    }
+}

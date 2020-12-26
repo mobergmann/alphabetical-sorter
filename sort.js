@@ -58,7 +58,7 @@ function is_smaller(left, right)
                     right_ascii = (right_ascii % 65) * 2;
                 }
                 
-                // compare latain letters on ascii code
+                // compare latin letters on ascii code
                 return left_ascii < right_ascii;
             }
             else
@@ -142,7 +142,7 @@ function is_whitespace(str)
  */
 function sort(text, out_id)
 {
-    // split the arrays into subarrays
+    // split the arrays into subarray
     let lines = text.split("\n");
     
     // remove empty lines

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Alphabetical</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./sort.js"></script>
+    
+    <form>
+        <div class="texts">
+            <div class="text_input">
+                <label>Input</label>
+                <textarea
+                    id="txt_in"
+                    rows="15" cols="100"
+                    oninput="sort(document.getElementById('txt_in').value);"
+                    class="form-row textarea"></textarea>
+            </div>
+
+            <div class="text_input">
+                <label>Sorted</label>
+                <textarea readonly
+                    id="txt_out"
+                    rows="15" cols="100"></textarea>
+            </div>   
+        </div>
+
+        <div class="sort_buttons">
+            <input
+                type="button"
+                value="Sort"
+                onclick="sort(document.getElementById('txt_in').value);">
+
+            <input
+                type="reset">
+        </div>
+        
+        <!-- Sort algorithm -->
+        <!-- TODO Radio  -->
+
+        <script>
+            document.getElementById("txt_in").value = 
+                '#include "Wambo.h"\n'+
+                '#include "Baum.h"\n'+
+                '#include "Radieschen.h"\n'+
+                '#include "Zomby.h"\n'+
+                '#include "Apfel.h"';
+        </script>
+        
+    </form>
+
+</html>

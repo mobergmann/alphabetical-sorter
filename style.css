@@ -1,0 +1,73 @@
+html, body
+{
+    height: 100%;
+}
+
+
+
+form
+{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+}
+
+
+.texts
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.text_input
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.text_input label
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.text_input textarea
+{
+    display: flex;
+    flex-direction: column;
+
+    resize: none;
+    overflow: scroll;
+
+    width: 100%;
+}
+
+
+
+.sort_buttons
+{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+
+
+.form-row textarea
+{
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    box-sizing: content-box;
+    background-color: transparent;
+    overflow-y: hidden;
+    padding: 1.5rem 0;
+    resize: none;
+}

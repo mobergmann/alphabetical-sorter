@@ -131,7 +131,7 @@ const whitespace_regex = new RegExp("^[\\n\\r\\s]+$");
  */
 function is_whitespace(str)
 {
-    return str.match(whitespace_regex) || !(lines[i].length > 0);
+    return str.match(whitespace_regex) || !(str.length > 0);
 }
 
 /**

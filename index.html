@@ -16,7 +16,11 @@
 
     <header>
         <h1>Alphabetical Sorter</h1>
-        <p>Sorts text by lines alphabetically.</p>
+        <p>
+            Sorts a given text line by line by alphabet, using the MergeSort algorithm.<br>
+            An uppercase letter is weighted lighter than a lowercase letter, with the following letter being
+            weighted even lighter.
+        </p>
     </header>
 
     <form id="id_reset">
@@ -32,8 +36,7 @@
 
 
             <div class="buttons">
-                <input type="button" value="Reset"
-                    onclick="reset_form('id_reset');">
+                <input type="button" value="Reset" onclick="reset_form('id_reset');">
 
                 <input type="button" value="Sort"
                     onclick="document.getElementById('id_out').value = sort(document.getElementById('id_in').value);">
@@ -50,9 +53,12 @@
         </div>
     </form>
 
-
     <footer>
-        <a href="https://github.com/mobergmann/alphabetical-sorter">GitHub</a>
+        <a href="https://github.com/mobergmann/alphabetical-sorter">
+            View on GitHub
+            <img src="./image/GitHub-Mark-120px-plus.png"
+                height="24px" width="24px">
+        </a>
     </footer>
 
 </html>

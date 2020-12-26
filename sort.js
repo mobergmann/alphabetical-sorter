@@ -140,7 +140,7 @@ function is_whitespace(str)
  * @param {string} text 
  * @param {string} out_id 
  */
-function sort(text, out_id)
+function sort(text)
 {
     // split the arrays into subarray
     let lines = text.split("\n");
@@ -165,6 +165,5 @@ function sort(text, out_id)
         txt += str + "\n";
     });
 
-    // display sorted lines
-    document.getElementById(out_id).value = txt;
+    return txt;
 }

@@ -19,31 +19,29 @@
         <p>Sorts text by lines alphabetically.</p>
     </header>
 
-    <form>
-        <div class="texts">
+    <form class="">
+        <div class="input_container">
 
-            <div class="text_input">
+            <!-- Input Text to sort -->
+            <fieldset>
+                <legend>Input</legend>
 
-                <!-- Input Text to sort -->
-                <label>Input</label>
-                <textarea id="txt_in" rows="15" cols="100"
-                    oninput="sort(document.getElementById('txt_in').value, 'txt_out');"
-                    class="form-row textarea"></textarea>
+                <textarea id="id_in"
+                    oninput="document.getElementById('id_out').value = sort(document.getElementById('id_in').value);"></textarea>
+            </fieldset>
 
-            </div>
+            <!-- Sorted Output -->
+            <fieldset class="output_container">
+                <legend>Sorted</legend>
 
-            <div class="text_input">
-
-                <!-- Sorted Output -->
-                <label>Sorted</label>
-                <textarea readonly id="txt_out" rows="15" cols="100"></textarea>
-
-            </div>
+                <textarea readonly id="id_out"></textarea>
+            </fieldset>
 
         </div>
 
-        <div class="sort_buttons">
-            <input type="button" value="Sort" onclick="sort(document.getElementById('txt_in').value, 'txt_out');">
+        <div class="buttons">
+            <input type="button" value="Sort"
+                onclick="document.getElementById('id_out').value = sort(document.getElementById('id_in').value);">
             <input type="reset">
         </div>
     </form>

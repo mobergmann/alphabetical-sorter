@@ -1,74 +1,29 @@
-html, body
-{
-    font-family: sans-serif;
-    /* height: 100%; */
-}
-
-
-
-form
-{
-    display: flex;
-    flex-direction: column;
-
-    /* min-height: 100%; */
-}
-
-
-.texts
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.text_input
+.input_container
 {
     display: flex;
     flex-direction: column;
 }
 
-.text_input label
+.input_container fieldset
 {
-    display: flex;
-    flex-direction: column;
+    margin: 1em;
 }
 
-.text_input textarea
+.input_container fieldset legend
 {
-    display: flex;
-    flex-direction: column;
+    background-color: #000;
+    border-radius: 3px;
+    color: #fff;
+    padding: 3px 6px;
+}
 
-    resize: none;
-    overflow: scroll;
-
+.input_container fieldset textarea
+{
     width: 100%;
-}
-
-
-
-.sort_buttons
-{
-    /* display: flex;
-    justify-content: center; */
-    
-}
-
-
-
-
-
-.form-row textarea
-{
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    outline: 0;
-    box-shadow: none;
-    border: none;
-    border-bottom: 1px solid #ced4da;
-    border-radius: 0;
-    box-sizing: content-box;
-    background-color: transparent;
-    overflow-y: hidden;
-    padding: 1.5rem 0;
+    height: 20em;
     resize: none;
+    overflow-y: scroll;
+    /* height: 50vh; */
+    border: none;
 }
+

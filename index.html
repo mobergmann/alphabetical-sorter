@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sort Alphabetical</title>
-    
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <!-- Define Functions -->
     <script src="./sort.js"></script>
-    
+
     <header>
         <h1>Alphabetical Sorter</h1>
         <p>Sorts text by lines alphabetically.</p>
@@ -21,25 +23,21 @@
         <div class="texts">
 
             <div class="text_input">
-            
+
                 <!-- Input Text to sort -->
                 <label>Input</label>
-                <textarea
-                    id="txt_in"
-                    rows="15" cols="100"
+                <textarea id="txt_in" rows="15" cols="100"
                     oninput="sort(document.getElementById('txt_in').value, 'txt_out');"
                     class="form-row textarea"></textarea>
-            
+
             </div>
 
             <div class="text_input">
 
                 <!-- Sorted Output -->
                 <label>Sorted</label>
-                <textarea readonly
-                    id="txt_out"
-                    rows="15" cols="100"></textarea>
-            
+                <textarea readonly id="txt_out" rows="15" cols="100"></textarea>
+
             </div>
 
         </div>
@@ -53,4 +51,5 @@
     <footer>
         <a href="https://github.com/mobergmann/alphabetical-sorter">GitHub</a>
     </footer>
+
 </html>

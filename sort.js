@@ -22,14 +22,17 @@ function is_lat_char(c) {
  */
 function is_smaller(left, right)
 {
-    for (let i = 0; i < left.length || i < right.length; i++)
+    for (let i = 0; i < left.length && i < right.length; i++)
     {
         if (left[i] != right[i])
         {
-            if (is_lat_char(left[i]) && is_lat_char(right[i]))
+            const char_left = left[i];
+            const char_right = right[i];
+
+            if (is_lat_char(char_left) && is_lat_char(char_right))
             {
-                let left_ascii = left[i].charCodeAt(0);
-                let right_ascii = right[i].charCodeAt(0);
+                let left_ascii = char_left.charCodeAt(0);
+                let right_ascii = char_right.charCodeAt(0);
 
                 // is lower chase norm to upper case, but one less important (A -> b)
                 if (left_ascii > 96)

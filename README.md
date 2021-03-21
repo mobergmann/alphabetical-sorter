@@ -7,6 +7,8 @@ An uppercase letter is weighted lighter than a lowercase letter, with the follow
 A -> a -> B -> b -> ...
 ```
 
+<img alt="Demo Image" src="https://i.imgur.com/4xSuS9E.png">
+
 Attention, there can be performance issues if the text contains too many characters, because sorting is done every time a word is typed in.
 Work around this problem by simply prewriting the text and copying it in.
 
